@@ -408,6 +408,8 @@ esac
 #####################################################
 JAVA_OPTIONS+=("-Djetty.home=$JETTY_HOME" "-Djava.io.tmpdir=$TMPDIR")
 
+JAVA_OPTIONS+=("-Dorg.apache.jasper.compiler.disablejsr199=true")
+
 [ -f "$JETTY_HOME/etc/start.config" ] && JAVA_OPTIONS=("-DSTART=$JETTY_HOME/etc/start.config" "${JAVA_OPTIONS[@]}")
 
 #####################################################
